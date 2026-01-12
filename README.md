@@ -19,20 +19,25 @@ This is an experimental project for creating Local Device Farm. Running on local
 
 ## Setup on my personal farm
 
-Lenovo M715Q as Server
-- Ubuntu Server 24.04 LTS
+Lenovo M715Q as Server (Used computer from marketplace)
+- [Ubuntu Server 24.04 LTS](https://ubuntu.com/download/server)
 - 8GB of RAM
-- SSD 256GB
+- 256GB of SSD
+- Wifi Network
+
+## Tech Stack
+- FastAPI
+- Uvicorn
+
+## Device Testing
 
 | Device | Specs |
 | ------ | ------ |
-| Infinix Hot 30I | rom and specs will written here later |
-| Samsung A04S |  rom and specs will written here later |
-| Tecno Pova 7 5G |  rom and specs will written here later |
-| Redmi 5 Board Only | Modificated |
+| Infinix Hot 30I | STOCK ROM |
+| Samsung A04S |  STOCK ROM |
+| Tecno Pova 7 5G |  STOCK ROM |
 
 
 ## Screenshots
-
-![Under construction](under construction)
+Under construction
 
