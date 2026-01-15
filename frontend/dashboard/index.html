@@ -1,0 +1,111 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Device Farm Tools</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Global CSS -->
+  <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body class="dashboard-body">
+
+<div class="app">
+
+  <aside class="sidebar">
+    <div class="brand">
+      <div><span>Device Farm Tool</span></div>
+    </div>
+
+    <nav class="nav">
+      <a href="#" class="active">🏠 <span>Dashboard</span></a>
+      <a href="#">📊 <span>Reporter</span></a>
+      <a href="#">👥 <span>Device Manager</span></a>
+      <a href="#">⚙️ <span>Version Settings</span></a>
+      <a href="#">⚙️ <span>Trigger Settings</span></a>
+      <a href="../login/index.html">🚪 <span>Logout</span></a>
+    </nav>
+  </aside>
+
+  <main class="main">
+    <!-- Stats -->
+     <section class="stats">
+      <div class="card stat-card">
+        <div class="label" style="text-align: center" >Placeholder for server cpu load</div>
+        <div class="value" style="text-align: center" id="usersCount">1,248</div>
+      </div>
+      <div class="card stat-card">
+        <div class="label" style="text-align: center" >Placeholder for server ram load</div>
+        <div class="value" style="text-align: center" id="usersCount">948</div>
+      </div>
+      <div class="card stat-card">
+        <div class="label" style="text-align: center" >placeholder for server storage</div>
+        <div class="value" style="text-align: center" id="usersCount">38</div>
+      </div>
+      <div class="card stat-card">
+        <div class="label" style="text-align: center" >placeholder for current version</div>
+        <div class="value" style="text-align: center" id="usersCount">38</div>
+      </div>
+    </section>
+    <section class="stats">
+      <div class="card stat-card">
+        <div class="label" style="text-align: center" >Total Automation Scripts</div>
+        <div class="value" style="text-align: center" id="usersCount">1,248</div>
+      </div>
+      <div class="card stat-card">
+        <div class="label" style="text-align: center" >Success Automation Scripts</div>
+        <div class="value" style="text-align: center" id="usersCount">948</div>
+      </div>
+      <div class="card stat-card">
+        <div class="label" style="text-align: center" >Failed Automation Scripts</div>
+        <div class="value" style="text-align: center" id="usersCount">38</div>
+      </div>
+      <div class="card stat-card">
+        <div class="label" style="text-align: center" >Scripts need some attention</div>
+        <div class="value" style="text-align: center" id="usersCount">38</div>
+      </div>
+    </section>
+    <section class="card table-card">
+      <h3>Recent Automation Run</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>build version</th>
+            <th>Scripts Executed</th>
+            <th>Date</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody id="activityTable">
+          <tr>
+            <td>v2.83</td>
+            <td>283</td>
+            <td>2026-01-16</td>
+            <td><span class="status success">Passed</span></td>
+          </tr>
+          <tr>
+            <td>2.89</td>
+            <td>325</td>
+            <td>2026-01-16</td>
+            <td><span class="status pending">Need some attention</span></td>
+          </tr>
+          <tr>
+            <td>2.30</td>
+            <td>532</td>
+            <td>2026-01-15</td>
+            <td><span class="status failed">Failed</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+  </main>
+</div>
+
+<script src="../../js/scripts.js"></script>
+</body>
+</html>
