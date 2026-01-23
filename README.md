@@ -1,12 +1,8 @@
 # Tiny Project for Device Farm
-## The Simple Way to Create Your Home Lab for Device Farm (and its cheap. hopefully)
+## Create Your Home Lab Server for Device Farm (and its cheap... hopefully)
 
 
 This is an experimental project for creating Local Device Farm. Running on local PC as Device Farm Server. For now only supports Android Devices.
-
-## Authors
-
-- [@donnykurniawan](https://www.github.com/donnykurniawan) (for now)
 
 ## Features in development
 - Dashboard for Test Summary (Success rate, Failed, Need to Improve)
@@ -19,9 +15,10 @@ This is an experimental project for creating Local Device Farm. Running on local
 
 ## Setup on my personal farm
 
-Lenovo M715Q as Server (Used computer from marketplace)
+Lenovo M715Q as Server
 - [Ubuntu Server 24.04 LTS](https://ubuntu.com/download/server)
-- 8GB of RAM
+- AMD Ryzen 5 2400GE
+- 8GB of RAM (2x 4GB DDR4)
 - 256GB of SSD
 - Wifi Network
 
@@ -29,12 +26,10 @@ Lenovo M715Q as Server (Used computer from marketplace)
 - FastAPI
 - Uvicorn
 
-## Device Testing
+## POC Testing Device For Now
 
 | Device | Specs |
 | ------ | ------ |
-| Infinix Hot 30I | STOCK ROM |
-| Samsung A04S |  STOCK ROM |
 | Tecno Pova 7 5G |  STOCK ROM |
 
 
