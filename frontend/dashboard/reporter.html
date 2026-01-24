@@ -1,12 +1,13 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Device Farm Tools</title>
+  <title>Reporter</title>
+  <link rel="icon" type="image/png" href="../assets/logo.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../../../css/style.css">
+  <link rel="stylesheet" href="../css/style.css">
 </head>
 <body class="dashboard-body">
 
@@ -14,21 +15,22 @@
 
   <aside class="sidebar">
     <div class="brand">
-      <div><span>Device Farm Tool Reporter</span></div>
+      <div><span>Helios Device Farm Tools</span></div>
     </div>
 
     <nav class="nav">
-      <a href="#">🏠 <span>Dashboard</span></a>
-      <a href="#" class="active">📊 <span>Reporter</span></a>
-      <a href="#">👥 <span>Device Manager</span></a>
+      <a href="../dashboard/index.html">🏠 <span>Dashboard</span></a>
+      <a href="../dashboard/reporter.html" class="active">📊 <span>Reporter</span></a>
+      <a href="../dashboard/device_manager.html">👥 <span>Device Manager</span></a>
       <a href="#">⚙️ <span>Version Settings</span></a>
       <a href="#">⚙️ <span>Trigger Settings</span></a>
-      <a href="../../login/index.html">🚪 <span>Logout</span></a>
+      <a href="../login.html">🚪 <span>Logout</span></a>
     </nav>
   </aside>
 
   <main class="main">
     <section class="card table-card">
+      <!--MOCK DATA-->
       <h3>Recent Automation Run</h3>
       <table>
         <thead>
@@ -40,7 +42,7 @@
             <th>Action</th>
           </tr>
         </thead>
-        <tbody id="activityTable">
+        <tbody id="TestTable">
           <tr>
             <td>v2.83</td>
             <td>283</td>
@@ -69,6 +71,6 @@
   </main>
 </div>
 
-<script src="../../../js/scripts.js"></script>
+<script src="../js/scripts.js"></script>
 </body>
 </html>

@@ -1,0 +1,56 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Device Manager</title>
+  <link rel="icon" type="image/png" href="../assets/logo.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="dashboard-body">
+
+<div class="app">
+
+  <aside class="sidebar">
+    <div class="brand">
+      <div><span>Helios Device Farm Tools</span></div>
+    </div>
+
+    <nav class="nav">
+      <a href="../dashboard/index.html">🏠 <span>Dashboard</span></a>
+      <a href="../dashboard/reporter.html">📊 <span>Reporter</span></a>
+      <a href="../dashboard/device_manager.html" class="active">👥 <span>Device Manager</span></a>
+      <a href="#">⚙️ <span>Version Settings</span></a>
+      <a href="#">⚙️ <span>Trigger Settings</span></a>
+      <a href="../login.html">🚪 <span>Logout</span></a>
+    </nav>
+  </aside>
+
+  <main class="main">
+    <section class="card table-card">
+      <h3>Connected Device</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Device Type</th>
+            <th>Android Version</th>
+            <th>Serial Number</th>
+            <th>APK Version</th>
+            <th>Device Status</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody id="activityTable">
+           <!-- pull it using my scripts -->
+        </tbody>
+      </table>
+    </section>
+
+  </main>
+</div>
+
+<script src="../js/scripts.js"></script>
+</body>
+</html>

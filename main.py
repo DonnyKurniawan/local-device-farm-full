@@ -1,9 +1,21 @@
 from fastapi import FastAPI, UploadFile, File, HTTPException
+from fastapi.middleware.cors import CORSMiddleware
 import psutil
 import subprocess
 import os
 
 app = FastAPI(title="Device Farm Backend System")
+
+# To avoid cors problem
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
+
 
 def get_apk_package_name(apk_path: str) -> str:
     try:
@@ -37,7 +49,7 @@ def metrics():
 
 #function for get devices list
 @app.get("/devices")
-def devices():
+def devices(package_name: str | None = None):
     try:
         result = subprocess.check_output(
             ["adb", "devices"],
@@ -49,17 +61,53 @@ def devices():
         devices = []
 
         for line in lines:
-            if line.strip():
-                device_id, status = line.split("\t")
-                devices.append({
-                    "id": device_id,
-                    "status": status
-                })
+            if not line.strip():
+                continue
+
+            device_id, status = line.split("\t")
+
+            # Phone model
+            model = subprocess.check_output(
+                ["adb", "-s", device_id, "shell", "getprop", "ro.product.model"],
+                text=True
+            ).strip()
+
+            # Android version
+            android_version = subprocess.check_output(
+                ["adb", "-s", device_id, "shell", "getprop", "ro.build.version.release"],
+                text=True
+            ).strip()
+
+            app_version = None
+            if package_name:
+                try:
+                    dump = subprocess.check_output(
+                        [
+                            "adb", "-s", device_id,
+                            "shell", "dumpsys", "package", package_name
+                        ],
+                        text=True
+                    )
+                    for l in dump.splitlines():
+                        if "versionName=" in l:
+                            app_version = l.split("versionName=")[1].strip()
+                            break
+                except subprocess.CalledProcessError:
+                    app_version = None
+
+            devices.append({
+                "serial": device_id,
+                "status": status,
+                "model": model,
+                "android_version": android_version,
+                "app_version": app_version
+            })
 
         return {"devices": devices}
 
     except Exception as e:
         return {"error": str(e)}
+
 
 #function for uploading APK
 @app.post("/upload-apk")
@@ -87,7 +135,9 @@ async def upload_apk(file: UploadFile = File(...)):
         "filename": file.filename,
         "path": file_path
     }
-'''@app.post("/upload-apk")
+'''
+Before enhancement
+@app.post("/upload-apk")
 async def upload_apk(file: UploadFile = File(...)):
     os.makedirs("uploads", exist_ok=True)
     file_path = os.path.join("uploads", file.filename)
