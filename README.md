@@ -7,11 +7,17 @@ This is an experimental project for creating Local Device Farm. Running on local
 - Upload APK to local servers storage
 - Install APK to Devices
 - Monitoring connected device
-    
-## Features in development backend and frontend
+- 
+
+## Frontend Done not yet integrated
+- Login page
+- sample dashboard page (MOCK)
+- sample running test page (MOCK)
+- connected device page (BETA)
+
+## Target
 - Dashboard for Test Summary (Success rate, Failed, Need to Improve)
-- Monitoring your Device Status 
-- Device Controlling (Run Individualy, Run All)
+- Monitoring your Device Status + Install It
 - APK Versioning (Upload to Device Farm Server, APK Versioning)
 - Discord Integration for webhook report
 - Reporter file for test
