@@ -49,4 +49,4 @@ for linux
 
 
 ## Screenshots
-Under construction
+![Donny Kurniawan](/screenshoots/1.png)
