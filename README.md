@@ -1,10 +1,14 @@
 # Tiny Project for Device Farm
 ## Create Your Home Lab Server for Device Farm (and its cheap... hopefully)
 
-
 This is an experimental project for creating Local Device Farm. Running on local PC as Device Farm Server. For now only supports Android Devices.
 
-## Features in development
+## Backend Done for BETA
+- Upload APK to local servers storage
+- Install APK to Devices
+- Monitoring connected device
+    
+## Features in development backend and frontend
 - Dashboard for Test Summary (Success rate, Failed, Need to Improve)
 - Monitoring your Device Status 
 - Device Controlling (Run Individualy, Run All)
