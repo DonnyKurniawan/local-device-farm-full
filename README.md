@@ -1,10 +1,14 @@
 # Tiny Project for Device Farm
 ## Create Your Home Lab Server for Device Farm (and its cheap... hopefully)
 
-
 This is an experimental project for creating Local Device Farm. Running on local PC as Device Farm Server. For now only supports Android Devices.
 
-## Features in development
+## Backend Done for BETA
+- Upload APK to local servers storage
+- Install APK to Devices
+- Monitoring connected device
+    
+## Features in development backend and frontend
 - Dashboard for Test Summary (Success rate, Failed, Need to Improve)
 - Monitoring your Device Status 
 - Device Controlling (Run Individualy, Run All)
@@ -22,11 +26,22 @@ Lenovo M715Q as Server
 - 256GB of SSD
 - Wifi Network
 
+## How to Run Backend
+- instal venv
+
+for windows user
+go to directory folder using cmd. makesure you have python installed in your system
+run by typing start_windows.cmd
+
+for linux
+- run this first chmod +x run_server.sh
+- type linux.sh
+
 ## Tech Stack
 - FastAPI
 - Uvicorn
 
-## POC Testing Device For Now
+## Testing Device For Now
 
 | Device | Specs |
 | ------ | ------ |
@@ -35,4 +50,3 @@ Lenovo M715Q as Server
 
 ## Screenshots
 Under construction
-
